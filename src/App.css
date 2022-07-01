@@ -1,0 +1,88 @@
+.filtering span {
+  margin-right: 6px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #89c951;
+  text-decoration: none;
+  border: 1px solid #89c951;
+  padding: 4px 15px;
+  border-radius: 50px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.filtering span:last-child {
+  margin: 0;
+}
+
+.card span {
+  margin: 0 2px;
+}
+
+.filtering span:hover,
+.filtering .active {
+  color: #fff;
+  border-color: #89c951;
+  background-color: #89c951;
+}
+
+.portfolio-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: all 500ms ease;
+}
+
+.portfolio-wrapper .portfolio-image img {
+  transition: all 0.5s ease;
+  transform: none;
+  width: 100%;
+}
+
+.portfolio-wrapper:hover .portfolio-image img {
+  transform: scale(1.2);
+  will-change: transform;
+}
+
+.portfolio-overlay:before {
+  position: absolute;
+  display: inline-block;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  content: "";
+  opacity: 0;
+  transition: all 0.5s ease;
+  transform: scale(0.85);
+}
+
+.portfolio-link:hover h5 {
+  color: #66808A;
+}
+
+.portfolio-wrapper:hover .portfolio-overlay {
+  background: #f7f7f7;
+  opacity: 1;
+}
+
+.portfolio-wrapper:hover .portfolio-overlay:before {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.portfolio-wrapper:hover .portfolio-overlay {
+  transform: translateY(50%);
+  transition: transform 0.5s ease;
+  opacity: 1;
+}
